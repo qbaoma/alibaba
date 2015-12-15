@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到淘宝</title>
+</head>
+<body>
+{% if user==None %}
+<p><a href="/">点击登录</a></p>
+{% else %}
+<p>亲爱的用户{{ user }}</p>
+{% end %}
+<p>
+<a href="/products"> 查看所有商品 </a><br>
+</p>
+<p>
+<a href="/car">查看我的购物车</a><br>
+</p>
+<p>
+<a href="#">查看历史购买记录</a><br>
+</p>
+<br><br>
+<form action="/product/0" method="post">
+    <p>我要添加商品</p>
+    <p>商品价格<br>
+    <input type="text" name="price">
+    </p>
+    <p>
+        商品描述<br>
+        <input type="text" name="desc">
+    </p>
+    <p>
+        商品图片位置<br>
+        <input type="text" name="url">
+    </p>
+    <input type="submit" value="提交商品信息">
+</form>
+
+<p>
+    <a href="/logout" >注销当前用户</a>
+</p>
+
+</body>
+</html>
