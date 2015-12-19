@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户购买记录</title>
+</head>
+<body>
+<h2>历史购买记录</h2>
+<hr>
+{% for tran in trans %}
+<p> 购买产品id {{tran.product_id}}</p>
+<p> 成交时间 {{ tran.tra_time }}</p>
+<hr>
+{% end %}
+</body>
+</html>

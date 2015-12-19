@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>你的购物车</title>
+</head>
+<body>
+{% for product in products %}
+<form method="post" action="/buy">
+<p>商品id</p> {{ product }}<br>
+    <p>价格:{{productsd[product].price}}</p>
+    <p>描述:{{productsd[product].desc}}</p>
+    <p>商品图片:{{productsd[product].picture}}</p>
+<p>购物车种数量</p>
+    <input type="hidden" name="product_id" value="{{product}}">
+
+<input type="number" name="buyCount" value="{{ products[product] }}">
+    <input type="submit" value="提交购买">
+</form>
+<hr>
+{% end %}
+</body>
+</html>

@@ -39,6 +39,7 @@ class IndexHandler(tornado.web.RequestHandler):
             res=check_user(account,passw)
             if res:
                 self.set_secure_cookie("username",account)
+                self.set_secure_cookie("user_id",unicode(res))
                 self.redirect('/')
             else:
                 self.render("login_fail.html")

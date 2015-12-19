@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>您当前的账户信息</title>
+</head>
+<body>
+{% for account in accounts %}
+<p>account_id</p>
+{{ account.id }}
+<p>账户余额</p>
+{{ account.balance }}
+<br>
+<hr>
+{% end %}
+</body>
+</html>

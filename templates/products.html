@@ -8,7 +8,7 @@
 <h2>所有商品，请点击你喜欢的加入购物车或直接购买</h2>
 {% for product in products %}
 <p>商品id<br>{{ product.id }}<br> <br>商品描述<br>{{ product.desc }}<br><br>
-    商品图片<br>{{ product.picture }}
+    商品图片<br>{{ product.picture }}<br>商品价格<br>{{ product.price }}
 </p>
 <form action="buy" method="post">
     <h3>购买该商品</h3>
