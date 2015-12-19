@@ -7,4 +7,6 @@
 tornado的模板直接渲染出html，客户端扩展性不强。同时为了减少数据通信量部分使用了Ajax。
               
   python 典型web框架很多，为尽可能大得支持在线用户数，选择了非阻塞异步的 tornado框架，tornado并不会为每一个在线用户保持一个线程。Tornado uses a single-threaded event loop，故需要在编程过程中避免阻塞函数。
+  
+  详细说明请参考本目录下 淘宝编写思路与使用说明.pdf
 
